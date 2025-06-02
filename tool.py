@@ -106,7 +106,7 @@ file_list = []
 while True:
     ck=input(f'\033[1;97m[\033[1;31m⁂\033[1;97m] {xanhnhat}Mời Nhập Cookie :{vang} ')
     try:
-        get=requests.get(f'https://mbasic.facebook.com/privacy/touch/block/confirm/?bid={idcanspam}&ret_cancel&source=profile',headers={'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','accept-language': 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5','cookie': ck,'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="102", "Google Chrome";v="102"','sec-ch-ua-mobile': '?0','sec-ch-ua-platform': '"Windows"','sec-fetch-dest': 'document','sec-fetch-mode': 'navigate','sec-fetch-site': 'same-origin','sec-fetch-user': '?1','upgrade-insecure-requests': '1'}).text
+        get=requests.get(f'https://www.facebook.com/messages/t/{idcanspam}&ret_cancel&source=profile',headers={'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','accept-language': 'vi-VN,vi;q=0.9,fr-FR;q=0.8,fr;q=0.7,en-US;q=0.6,en;q=0.5','cookie': ck,'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="102", "Google Chrome";v="102"','sec-ch-ua-mobile': '?0','sec-ch-ua-platform': '"Windows"','sec-fetch-dest': 'document','sec-fetch-mode': 'navigate','sec-fetch-site': 'same-origin','sec-fetch-user': '?1','upgrade-insecure-requests': '1'}).text
         fb_dtsg=get.split('<input type="hidden" name="fb_dtsg" value="')[1].split('" autocomplete="off" />')[0]
         jazoest=get.split('<input type="hidden" name="jazoest" value="')[1].split('" autocomplete="off" />')[0]
         clear()
@@ -134,19 +134,20 @@ params = {
 }
     
 headers = {
-      "Host":"mbasic.facebook.com",
-      "content-length":"237",
-      "content-type":"application/x-www-form-urlencoded",
-      "user-agent":"Mozilla/5.0 (Linux; Android 8.1.0; Redmi 5A Build/OPM1.171019.026) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.130 Mobile Safari/537.36",
-      "accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-      "sec-fetch-site":"same-origin",
-      "sec-fetch-mode":"navigate",
-      "sec-fetch-user":"?1",
-      "sec-fetch-dest":"document",
-      "accept-encoding":"gzip, deflate, br",
-      "accept-language":"vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7",
-      "cookie":ck,
-}  
+                'Cookie': self.cookie,
+                'User-Agent': self.user_agent,
+                'Accept': '*/*',
+                'Accept-Language': 'vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7',
+                'Accept-Encoding': 'gzip, deflate, br',
+                'Connection': 'keep-alive',
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'Origin': 'https://www.facebook.com',
+                'Referer': f'https://www.facebook.com/messages/t/{recipient_id}',
+                'Host': 'www.facebook.com',
+                'Sec-Fetch-Site': 'same-origin',
+                'Sec-Fetch-Mode': 'cors',
+                'Sec-Fetch-Dest': 'empty'
+}
 if yn.lower() == 'y':
       delay=int(input(f'\033[1;97m[\033[1;31m</>\033[1;97m] {xanhnhat}Nhập Delay( 10 > 20 ) :{vang} '))
       while True:
@@ -159,7 +160,7 @@ if yn.lower() == 'y':
                   #data_list.append(ndss.decode('utf-8'))
             #for ndss in data_list:
               data = f"fb_dtsg={fb_dtsg}&jazoest={jazoest}&body={nds.decode('utf-8')}&send=Send&tids=cid.g.{idcanspam}&wwwupp=C3&platform_xmd=&referrer=&ctype=&cver=legacy&csid=366a74a7-2d30-45dd-94c2-ad47d662dcfb"
-              response = requests.post("https://mbasic.facebook.com/messages/send/", params=params, headers=headers, data=data.encode('utf-8'))
+              response = requests.post("https://www.facebook.com/messaging/send/", params=params, headers=headers, data=data.encode('utf-8'))
               print(f"\033[1;31m[\033[1;33m{i}\033[1;31m] \033[1;31m| \033[1;33mID Box \033[1;97m: {idcanspam} \033[1;31m| \033[1;31m| \033[1;35mTài Khoản : \033[1;97m: {xanh_la} Online")
               idelay(delay)
         except Exception as e:
@@ -177,7 +178,7 @@ elif yn.lower() == 'n':
               with open(name_file , "rb") as file:
                 nds = file.read()
                 data = f"fb_dtsg={fb_dtsg}&jazoest={jazoest}&body={nds.decode('utf-8')}&send=Send&tids=cid.g.{idcanspam}&wwwupp=C3&platform_xmd=&referrer=&ctype=&cver=legacy&csid=366a74a7-2d30-45dd-94c2-ad47d662dcfb"
-              response = requests.post("https://mbasic.facebook.com/messages/send/", params=params, headers=headers, data=data.encode('utf-8'))
+              response = requests.post("https://www.facebook.com/messaging/send/", params=params, headers=headers, data=data.encode('utf-8'))
               i = i + 1
               print(f"\033[1;31m[\033[1;33m{i}\033[1;31m] \033[1;31m| \033[1;33mID Box \033[1;97m: {idcanspam} \033[1;31m| \033[1;31m| \033[1;35mTài Khoản : \033[1;97m: {xanh_la} Online")
               idelay(delay) 
