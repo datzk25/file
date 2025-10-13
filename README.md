@@ -4,7 +4,7 @@
 </h1>
 
 <p align="center">
-  <img src="https://i.imgur.com/yY1eY7G.gif" width="400px" />
+  <img src="https://raw.githubusercontent.com/datzk25/file/refs/heads/main/discord_fake_avatar_decorations_1760355131750.gif" width="400px" />
 </p>
 
 ---
