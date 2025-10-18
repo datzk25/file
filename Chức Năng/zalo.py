@@ -220,7 +220,7 @@ def menu(c1, c2):
     print(grad("1️⃣  Nhây ", c1, c2))
     print(grad("2️⃣  Ngôn ", c1, c2))
     print(grad("3️⃣  Ngôn Tag", c1, c2))
-    print(grad("4️⃣  Nhây Tag, c1, c2))
+    print(grad("4️⃣  Nhây Tag", c1, c2))
     print(grad("0️⃣  Thoát", c1, c2))
 
 def choose_group(bot, c1, c2):
