@@ -174,7 +174,7 @@ def banner_live(messengers=None,c1=(255,0,255),c2=(0,255,255)):
         f"📅 Khởi chạy : {now}",
         "⚡ Phiên bản : Premium V5.0",
         "🌈 Developer : NovaX Team",
-        f"🌐 IP Thiết bị : {ip}"
+        f"🌐 Thiết bị  : {ip}"
     ], c1, c2)
     if messengers:
         print(grad("\nDanh sách cookie hợp lệ:", c1, c2))
