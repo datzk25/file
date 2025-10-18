@@ -43,11 +43,11 @@ def neon_box(title="", lines=None, c1=(255,0,255), c2=(0,255,255)):
     print(f"+{b}+")
     if title:
         t = grad(f" {title} ", c1,c2)
-        print(f"|{t.center(w)}|")
+        print(f"|{t.center(w)}")
         print(f"+{b}+")
     for line in lines or []:
         inner = grad(line.strip(), (240,240,255),(200,255,255))
-        print(f"| {inner:<{w-2}}|")
+        print(f"| {inner:<{w-2}}")
     print(f"+{b}+")
 
 # ================= BANNER / LOGO ===================
