@@ -1,5 +1,14 @@
 {
   "keys": [
-    {"key": "NovaX", "expire": "2026-12-31"}
+    {
+      "key": "admin",
+      "expire": "2025-12-30",   // ISO date YYYY-MM-DD
+      "active": true
+    },
+    {
+      "key": "ngu",
+      "expire": "2024-01-01",
+      "active": false
+    }
   ]
 }
