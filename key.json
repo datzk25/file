@@ -1,14 +1,14 @@
 {
   "keys": [
     {
-      "key": "admin",
-      "expire": "2025-12-30",   // ISO date YYYY-MM-DD
+      "key": "ABC123",
+      "expire": "2025-12-31",
       "active": true
     },
     {
-      "key": "ngu",
-      "expire": "2024-01-01",
-      "active": false
+      "key": "VIP888",
+      "expire": "2026-01-30",
+      "active": true
     }
   ]
 }
